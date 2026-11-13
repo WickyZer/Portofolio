@@ -129,9 +129,9 @@
 @media(prefers-reduced-motion:reduce){.certificate-pagination button span{transition:none}}
 
 /* Fanned certificate deck, with real records only. */
-.certificate-fan-stage{height:350px;position:relative;isolation:isolate;overflow:hidden;perspective:1000px;touch-action:pan-y;user-select:none;padding-top:20px;border-radius:24px}
+.certificate-fan-stage{height:365px;position:relative;isolation:isolate;overflow:visible;perspective:1000px;touch-action:pan-y;user-select:none;padding-top:20px;border-radius:24px}
 .certificate-fan-aura{position:absolute;inset:28% 5% 0;background:radial-gradient(ellipse,#ae64fa44,transparent 68%);filter:blur(20px);pointer-events:none}
-.certificate-fan-card{position:absolute;left:50%;top:25px;width:61%;height:293px;display:flex;flex-direction:column;text-align:left;border:1px solid #cf9dff55;border-radius:21px;padding:18px 16px 13px;background:linear-gradient(145deg,#56317b,#241332);box-shadow:0 18px 42px #09021566,inset 0 1px 2px #fff3;transform-origin:50% 115%;transform:translateX(calc(-50% + var(--fan-offset)*42%)) translateY(calc(var(--fan-depth)*22px)) rotate(calc(var(--fan-offset)*10deg)) scale(calc(1 - var(--fan-depth)*.09));opacity:calc(1 - var(--fan-depth)*.22);transition:transform .65s cubic-bezier(.22,1,.36,1),opacity .45s,border-color .3s,box-shadow .3s;cursor:pointer;overflow:hidden;color:var(--text)}
+.certificate-fan-card{position:absolute;left:50%;top:25px;width:52%;height:293px;display:flex;flex-direction:column;text-align:left;border:1px solid #cf9dff55;border-radius:21px;padding:18px 16px 13px;background:linear-gradient(145deg,#56317b,#241332);box-shadow:0 18px 42px #09021566,inset 0 1px 2px #fff3;transform-origin:50% 100%;transform:translateX(calc(-50% + var(--fan-offset)*26%)) translateY(calc(var(--fan-depth)*22px)) rotate(calc(var(--fan-offset)*7deg)) scale(calc(1 - var(--fan-depth)*.09));opacity:calc(1 - var(--fan-depth)*.22);transition:transform .65s cubic-bezier(.22,1,.36,1),opacity .45s,border-color .3s,box-shadow .3s;cursor:pointer;overflow:hidden;color:var(--text)}
 .certificate-fan-card:nth-of-type(3n){background:linear-gradient(145deg,#493984,#21162e)}
 .certificate-fan-card.is-active{border-color:#d2a5ffb0;background:linear-gradient(145deg,#814caa,#38204f 75%);box-shadow:0 20px 55px #13042188,0 0 30px #b96ff524,inset 0 1px 3px #fff5;opacity:1}
 .certificate-fan-card[aria-hidden=true]{visibility:hidden;pointer-events:none}
@@ -142,6 +142,8 @@
 .certificate-fan-card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .certificate-fan-detail{text-align:center;padding:0 22px 9px;min-height:160px}.certificate-fan-detail>.eyebrow{font-size:9px;line-height:1.7}.certificate-fan-detail>h3{font-size:20px;line-height:1.4;margin-top:10px;letter-spacing:-.035em}.certificate-fan-detail>p{font-size:12px;line-height:1.8;margin-top:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.certificate-fan-detail>.text-button{font-size:11px;margin-top:15px}
 [data-theme=light] .certificate-fan-card{color:#fff}
-@media(max-width:760px){.certificate-fan-stage{height:325px;margin:0 -10px}.certificate-fan-card{width:65%;height:270px;padding:15px 13px 12px;top:22px}.certificate-fan-card h3{font-size:14px;min-height:39px}.fan-card-top .eyebrow{font-size:7px}.certificate-fan-detail{padding:0 6px 9px}.certificate-fan-detail>h3{font-size:19px}}
+@media(max-width:760px){.certificate-fan-stage{height:340px;margin:0}.certificate-fan-card{width:52%;height:270px;padding:15px 13px 12px;top:22px}.certificate-fan-card h3{font-size:14px;min-height:39px}.fan-card-top .eyebrow{font-size:7px}.certificate-fan-detail{padding:0 6px 9px}.certificate-fan-detail>h3{font-size:19px}}
 @media(prefers-reduced-motion:reduce){.certificate-fan-card{transition:none}}
 .motion-paused .certificate-fan-card{transition:none}
+
+@media(max-width:760px){.certificate-fan-card{transform:translateX(calc(-50% + var(--fan-offset)*20%)) translateY(calc(var(--fan-depth)*22px)) rotate(calc(var(--fan-offset)*6deg)) scale(calc(1 - var(--fan-depth)*.09));padding-left:10px;padding-right:10px}.certificate-fan-card h3{font-size:12px}}
