@@ -11,7 +11,12 @@ export default function OrbitScene({ paused = false }: { paused?: boolean }) {
     const host = root.current;
     if (!host) return;
     let renderer: THREE.WebGLRenderer;
-    try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'low-power' }); }
+    try {
+      const canvas=document.createElement('canvas');
+      const context=canvas.getContext('webgl2',{alpha:true,antialias:true,powerPreference:'low-power'});
+      if(!context)return;
+      renderer = new THREE.WebGLRenderer({canvas,context,alpha:true,antialias:true,powerPreference:'low-power'});
+    }
     catch { return; }
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100);

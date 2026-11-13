@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://portofolio-fadhil-livid.vercel.app'),
   title: { default: 'Ahmad Fadhil Naufal — Student. Developer. Creative.', template: '%s | Ahmad Fadhil Naufal' },
   description: 'Ruang digital Ahmad Fadhil Naufal. Jelajahi proyek website, eksplorasi kreatif, dan perjalanan belajar saya sebagai mahasiswa.',
-  openGraph: { title: 'Ahmad Fadhil Naufal', description: 'Learning, building, and creating meaningful digital experiences.', type: 'website', locale: 'id_ID', images: [{ url: '/images/profile.webp', width: 800, height: 1067, alt: 'Ahmad Fadhil Naufal' }] },
+  openGraph: { title: 'Ahmad Fadhil Naufal', description: 'Learning, building, and creating meaningful digital experiences.', type: 'website', locale: 'id_ID', images: [{ url: '/api/media/profile', width: 800, height: 1067, alt: 'Ahmad Fadhil Naufal' }] },
   robots: { index: true, follow: true },
 };
 export const viewport: Viewport = { themeColor: '#0b0815', colorScheme: 'dark light' };

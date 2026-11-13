@@ -6,7 +6,8 @@ out/
 !.env.example
 *.tsbuildinfo
 test-results/
-# Personal media stays local until its public publication is explicitly authorized.
+# The optional generated CV remains private until publication is authorized.
+/public/Ahmad_Fadhil_Naufal_CV.pdf
+
 /public/images/hero.webp
 /public/images/profile.webp
-/public/Ahmad_Fadhil_Naufal_CV.pdf

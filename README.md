@@ -42,7 +42,7 @@ After the owner explicitly authorizes an email, the project administrator can in
 
 ## Database
 
-The dedicated Supabase project is `Portofolio` (`wfaozowenhssldhxtuwc`). Its schema is documented in `supabase/schema.sql` and `supabase/content.sql`; initial public content is in `supabase/seed.sql`. These have already been applied to the connected project. Do not reapply CREATE TABLE scripts to the existing database.
+The dedicated Supabase project is `Portofolio` (`wfaozowenhssldhxtuwc`). Its schema is documented in `supabase/schema.sql`, `supabase/content.sql`, and `supabase/media.sql`; initial public content is in `supabase/seed.sql`. These have already been applied to the connected project. Do not reapply CREATE TABLE scripts to the existing database.
 
 Public visitors can read published portfolio content and leave a contact message. They cannot read messages, private admin membership, or drafts, and cannot edit portfolio content or upload media. Authenticated accounts still need admin membership for editing and inbox access.
 
@@ -50,7 +50,7 @@ Public visitors can read published portfolio content and leave a contact message
 
 JASAhub has a supplied live URL. FrRoutine has a supplied repository. MySPACE and FRGAMES are labeled design/concept explorations. Certificate records start empty. No fabricated achievements, clients, experience durations, or credentials are displayed.
 
-Personal photos and the generated profile PDF remain local and are excluded from the public repository pending explicit permission to publish them. The public build uses a generic avatar and hides the PDF download. The local preview uses NEXT_PUBLIC_PERSONAL_ASSETS_READY=true. After publication is authorized, add the assets and enable that flag, or upload authorized media and CV through Studio. `scripts/build-cv.py` regenerates that default PDF with Python, ReportLab and DejaVu Sans.
+The owner explicitly authorized the two supplied photos for display on the website. Optimized WebP bytes are kept in `portfolio_media` and served through `/api/media/hero` and `/api/media/profile`, independently of the public GitHub source. Future admin uploads use the Supabase Storage bucket. Personal image files and the generated short-profile PDF are excluded from the public repository. Upload a full CV through Studio when ready. `scripts/build-cv.py` regenerates that default PDF with Python, ReportLab and DejaVu Sans.
 
 ## Deployment
 
