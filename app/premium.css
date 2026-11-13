@@ -74,3 +74,6 @@
 
 /* Keep native detail dialogs centered after the CSS reset. */
 .detail-dialog{margin:auto}
+
+:root[data-theme=light]{--bg:#f4eefa;--surface:rgba(255,255,255,.73);--surface-solid:#fffafd;--border:rgba(116,70,158,.24);--accent:#8746bd;--muted:#62536f;--faint:#756486}
+[data-theme=light] .portfolio .about-services>div>span{color:#8746bd}
