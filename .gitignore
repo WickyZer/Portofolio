@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.vercel/
+.env*
+!.env.example
+*.tsbuildinfo
+test-results/
+# Personal media stays local until its public publication is explicitly authorized.
+/public/images/hero.webp
+/public/images/profile.webp
+/public/Ahmad_Fadhil_Naufal_CV.pdf
