@@ -101,3 +101,29 @@
 @media(prefers-reduced-motion:reduce){.portfolio .contact-brand-link{transition:none}.portfolio .contact-brand-link:hover{transform:none}}
 
 .education-edit-body .logo-uploader>img{background:transparent}
+
+/* Certificate gallery: touch swiping with a quiet glass navigation rail. */
+.portfolio .certificate-gallery{min-width:0;max-width:100%}
+.portfolio .certificate-gallery .certificate-grid{display:flex;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;gap:18px;padding:0 0 5px;border-radius:23px}
+.portfolio .certificate-gallery .certificate-grid::-webkit-scrollbar{display:none;width:0;height:0}
+.portfolio .certificate-gallery .certificate-card{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always;padding:9px;border-radius:23px;transform:none}
+.portfolio .certificate-gallery .certificate-card:hover{border-color:#c794f999;box-shadow:inset 0 1px 2px #fff2,0 0 24px #a966e51a}
+.portfolio .certificate-gallery .certificate-image{position:relative;aspect-ratio:1.414;height:auto;overflow:hidden;border-radius:16px;background:#eee8f5;padding:0}
+.portfolio .certificate-gallery .certificate-image img{height:100%;width:100%;object-fit:contain}
+.certificate-position{position:absolute;top:12px;left:12px;padding:5px 9px;border-radius:20px;background:#29173dd9;color:#f7eaff;font-size:9px;letter-spacing:.08em;font-weight:500;backdrop-filter:blur(10px)}
+.portfolio .certificate-gallery .certificate-copy{padding:21px 17px 15px}
+.portfolio .certificate-gallery .certificate-copy .eyebrow{font-size:9px;line-height:1.7}
+.portfolio .certificate-gallery .certificate-copy h3{font-size:20px;line-height:1.4;margin-top:10px;letter-spacing:-.035em}
+.portfolio .certificate-gallery .certificate-copy p{font-size:12px;line-height:1.8;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-top:12px}
+.portfolio .certificate-gallery .certificate-copy .text-button{margin-top:23px;font-size:11px}
+.certificate-navigation{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 4px 0}
+.certificate-navigation>.icon-button{width:44px;height:44px;border:1px solid var(--border);background:linear-gradient(135deg,#bb80ee22,#6d3ca511);box-shadow:inset 0 1px 1px #fff2}
+.certificate-navigation>.icon-button:disabled{opacity:.3;cursor:default}
+.certificate-pagination{display:flex;justify-content:center;flex-wrap:wrap;gap:0;max-width:75%}
+.certificate-pagination button{width:24px;height:36px;display:grid;place-items:center;border:0;background:transparent;cursor:pointer}
+.certificate-pagination button span{display:block;width:6px;height:6px;border-radius:10px;background:var(--faint);opacity:.4;transition:width .25s,background .25s,opacity .25s}
+.certificate-pagination button.active{width:38px}
+.certificate-pagination button.active span{width:24px;opacity:1;background:var(--accent);box-shadow:0 0 12px #b57aef66}
+.certificate-pagination button:focus-visible{outline:2px solid var(--accent);outline-offset:0;border-radius:10px}
+@media(max-width:760px){.portfolio .certificate-gallery .certificate-copy{padding:19px 14px 14px}.portfolio .certificate-gallery .certificate-copy h3{font-size:19px}.certificate-navigation{padding-top:9px}}
+@media(prefers-reduced-motion:reduce){.certificate-pagination button span{transition:none}}
