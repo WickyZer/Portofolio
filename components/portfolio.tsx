@@ -73,7 +73,7 @@ export default function Portfolio() {
   function toggleTheme(){const t=theme==='dark'?'light':'dark';setTheme(t);document.documentElement.dataset.theme=t;try{localStorage.setItem('af-theme',t);}catch{}}
   function toggleMotion(){setPaused(!paused);try{localStorage.setItem('af-motion',!paused?'paused':'on');}catch{}}
   function moveSlide(delta:number){const el=carousel.current;if(!el)return;const next=Math.max(0,Math.min(filtered.length-1,slide+delta));const card=el.children[next] as HTMLElement;el.scrollTo({left:card.offsetLeft-el.offsetLeft-(el.clientWidth-card.clientWidth)/2,behavior:motionOff?'instant':'smooth'});setSlide(next);}
-  async function copyLink(){try{await navigator.clipboard.writeText('https://portofolio-fadhil-livid.vercel.app');setCopied(true);setTimeout(()=>setCopied(false),2200);}catch{setCopied(false);}}
+  async function copyLink(){try{await navigator.clipboard.writeText('https://ahmadfadhilnaufal.my.id');setCopied(true);setTimeout(()=>setCopied(false),2200);}catch{setCopied(false);}}
   async function submitMessage(e:FormEvent<HTMLFormElement>){e.preventDefault();const form=e.currentTarget;const data=new FormData(form);if(data.get('website'))return;setFormState('sending');const db=getSupabase();if(!db){setFormState('error');return;}const {error}=await db.from('portfolio_messages').insert({name:String(data.get('name')).trim(),email:String(data.get('email')).trim(),message:String(data.get('message')).trim()});if(error)setFormState('error');else{setFormState('success');form.reset();}}
   return <MotionConfig reducedMotion={motionOff?'always':'user'} transition={{ease}}><div className={`portfolio ${motionOff?'motion-paused':''}`}>
     <a className="skip-link" href="#main">Langsung ke konten</a>

@@ -4,7 +4,7 @@ import '@fontsource-variable/space-grotesk';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://portofolio-fadhil-livid.vercel.app'),
+  metadataBase: new URL('https://ahmadfadhilnaufal.my.id'),
   title: { default: 'Ahmad Fadhil Naufal — Student. Developer. Creative.', template: '%s | Ahmad Fadhil Naufal' },
   description: 'Ruang digital Ahmad Fadhil Naufal. Jelajahi proyek website, eksplorasi kreatif, dan perjalanan belajar saya sebagai mahasiswa.',
   openGraph: { title: 'Ahmad Fadhil Naufal', description: 'Learning, building, and creating meaningful digital experiences.', type: 'website', locale: 'id_ID', images: [{ url: '/api/media/profile', width: 800, height: 1067, alt: 'Ahmad Fadhil Naufal' }] },
