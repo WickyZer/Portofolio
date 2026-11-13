@@ -20,3 +20,5 @@
 @keyframes hero-type{from{opacity:0;translate:0 25px;filter:blur(7px)}to{opacity:1;translate:0 0;filter:blur(0)}}@keyframes hero-scene{from{opacity:0;scale:.97}to{opacity:1;scale:1}}@keyframes orbit-drift{0%,100%{transform:rotate(-32deg) rotateY(12deg)}50%{transform:rotate(-24deg) rotateY(-8deg)}}
 @media(max-width:760px){.hero-description{font-size:12px}.about-main p{font-size:11px}.section-heading p,.timeline p{font-size:10px}.contact-copy>p{font-size:11px}.certificate-empty-copy p,.skills-copy>p{font-size:11px}.hero-orbit-fallback{inset:23% -4% 29%;border-color:#bc85ff65}}
 @media(prefers-reduced-motion:reduce){.hero h1>span,.hero-art,.hero-orbit-fallback{animation:none;opacity:1;filter:none;translate:none;scale:none}}
+.portrait-frame{mask-image:linear-gradient(to bottom,transparent 0%,black 9%,black 79%,transparent 99%);-webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 9%,black 79%,transparent 99%)}
+[data-theme=light] .portrait-frame{mask-image:linear-gradient(to bottom,transparent 0%,black 9%,black 72%,transparent 99%)}
