@@ -15,3 +15,7 @@ Motion uses the official website favicon: https://motion.dev/favicon.ico
 The assets are converted to 128 px PNG for this website. No SVG is used to
 render application logos. The neutral education and generic tool placeholders
 are locally authored PNG assets and do not represent any institution or brand.
+
+Contact brands: LinkedIn uses Devicon linkedin/linkedin-original.svg.
+Gmail uses Google’s product image: https://www.gstatic.com/images/branding/product/2x/gmail_48dp.png
+Both are served as 128 px PNG.

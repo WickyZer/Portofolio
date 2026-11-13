@@ -64,3 +64,5 @@ Production: https://ahmadfadhilnaufal.my.id
 Vercel alias: https://portofolio-fadhil-livid.vercel.app
 
 Vercel uses Node.js 24, `npm ci`, and `npm run build`. Set the same two public Supabase variables for Production and Preview. The existing project protection settings are preserved.
+
+Education is displayed as a vertical list under Skills with a small uploaded logo beside each school. A saved logo also makes an entry visible before its school name is filled. LinkedIn, Gmail and GitHub icons in the collaboration panel use the profile/contact fields; empty values hide their icon.
