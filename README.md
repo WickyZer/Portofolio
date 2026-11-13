@@ -18,7 +18,7 @@ npm run build
 npm start
 ```
 
-The dev wrapper accepts `--port` for preview infrastructure. Fonts, photos and all default project illustrations are served locally. The Three.js scene is dynamically loaded, stops when hidden, and supports reduced motion. The site also offers a motion pause control and a persistent light/dark theme.
+The dev wrapper accepts `--port` for preview infrastructure. Fonts, default raster tool logos and project illustrations are served locally. Authorized personal photos are delivered through the media API. The Three.js scene is dynamically loaded, stops when hidden, and supports reduced motion. The site also offers a motion pause control and a persistent light/dark theme.
 
 ## Editing the portfolio
 
@@ -29,14 +29,18 @@ Open `/admin`, or choose **Studio** in the footer.
 | Profil & kontak | Name, roles, introduction, biography, focus, public email, WhatsApp, GitHub, Instagram, LinkedIn, location, hero photo, profile photo, PDF CV |
 | Proyek | Add/edit/delete projects, cover image, category, status, tags, live/source links, case study, display order, published/draft status |
 | Sertifikat | Upload certificate image, title, issuer, date, description, credential link, published/draft status |
-| Journey & skills | Add/edit/remove timeline entries and tools/skills |
+| Pendidikan | Add SD/SMP/SMK and other levels; school name, years, major, description, uploaded school logo; reorder/remove entries |
+| Aplikasi & logo | Edit tool name/category, choose an original raster brand logo, or upload PNG/JPG/WebP; add/remove tools |
+| Perjalanan | Add/edit/remove timeline entries |
 | Kotak pesan | Read incoming contact messages, mark read, delete |
+
+Use **Simpan perubahan** after editing profile, education, tools or timeline. Education starts empty so school names and years can be supplied accurately. Uploaded logos are public, raster images only (PNG/JPG/WebP); default brand sources are documented in `public/logos/SOURCES.md`.
 
 Changes to published content appear on the public site after reloading. Empty optional contact fields are hidden. Files in the public media bucket are public: upload only documents intended for portfolio visitors. Files must be JPG, PNG, WebP or PDF and no larger than 5 MB.
 
 ## Administrator access
 
-Sign in through Supabase Auth. New accounts must verify their email. Authentication alone does not grant editing rights: the verified email must also exist in `public.portfolio_admins`. Initial admin assignment awaits the owner's explicit choice and authorization. There is no first-user-admin shortcut or publicly callable activation endpoint.
+Sign in through Supabase Auth. New accounts must verify their email. Authentication alone does not grant editing rights: the verified email must also exist in `public.portfolio_admins`. Admin access is configured for the owner's authorized account. There is no first-user-admin shortcut or publicly callable activation endpoint.
 
 After the owner explicitly authorizes an email, the project administrator can insert that lower-case email using the Supabase SQL editor. Never grant public INSERT access to `portfolio_admins`. Configure the Supabase Auth Site URL to the production origin and include the production `/admin` URL in allowed redirects when enabling email confirmation or password recovery.
 
@@ -56,6 +60,7 @@ The owner explicitly authorized the two supplied photos for display on the websi
 
 GitHub: `WickyZer/Portofolio`, branch `main`.
 Vercel project: `portofolio-fadhil`.
-Production: https://portofolio-fadhil-livid.vercel.app
+Production: https://ahmadfadhilnaufal.my.id
+Vercel alias: https://portofolio-fadhil-livid.vercel.app
 
 Vercel uses Node.js 24, `npm ci`, and `npm run build`. Set the same two public Supabase variables for Production and Preview. The existing project protection settings are preserved.

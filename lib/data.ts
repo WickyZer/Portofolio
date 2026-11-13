@@ -12,14 +12,15 @@ export const journey = [
   { label: 'BUILD', title: 'Dari ide, menjadi sesuatu yang bisa dicoba.', text: 'Mengembangkan JASAhub dan FrRoutine sambil mempelajari pengalaman pengguna, pengembangan web, dan database.', tags: ['Web development', 'Product thinking'] },
   { label: 'EXPLORE', title: 'Terus membuka kemungkinan.', text: 'Mengeksplorasi MySPACE, FRGAMES, desain antarmuka, dan cara yang lebih kreatif untuk menyampaikan ide.', tags: ['UI/UX', 'Creative exploration'] },
 ];
-export type Skill = {name:string;sub:string;symbol:string;c:string};
+export type Skill = {name:string;sub:string;symbol:string;c:string;logo_url?:string};
+export type Education = {id:string;level:string;school:string;startYear:string;endYear:string;major:string;description:string;logo_url:string};
 export type Journey = {label:string;title:string;text:string;tags:string[]};
-export type Settings = {firstName:string;lastName:string;roles:string;heroDescription:string;about:string;aboutLong:string;currentFocus:string[];contactEmail:string;whatsapp:string;github:string;instagram:string;linkedin:string;location:string;cvUrl:string;heroImage:string;profileImage:string;journey:Journey[];skills:Skill[]};
+export type Settings = {firstName:string;lastName:string;roles:string;heroDescription:string;about:string;aboutLong:string;currentFocus:string[];contactEmail:string;whatsapp:string;github:string;instagram:string;linkedin:string;location:string;cvUrl:string;heroImage:string;profileImage:string;journey:Journey[];skills:Skill[];education:Education[]};
 export const defaultSettings:Settings = {
  firstName:'Ahmad Fadhil',lastName:'Naufal',roles:'Mahasiswa ✦ Web Developer ✦ Creative',
  heroDescription:'Mengubah rasa ingin tahu menjadi ide.\nMengubah ide menjadi pengalaman digital yang bermakna.',
  about:'Saya Fadhil, mahasiswa yang senang mengeksplorasi pertemuan teknologi dan kreativitas. Saya membangun website, merancang antarmuka, dan terus belajar lewat proyek yang saya kerjakan.',
  aboutLong:'Saya seorang mahasiswa yang menikmati proses belajar dan membuat sesuatu. Ketertarikan pada teknologi mendorong saya mengeksplorasi pengembangan website, desain antarmuka, dan berbagai proyek personal.\n\nMelalui JASAhub, FrRoutine, dan eksplorasi kreatif lainnya, saya belajar menghubungkan kebutuhan pengguna dengan pengalaman digital yang nyaman dan menarik. Proyek kuliah juga menjadi kesempatan untuk melatih cara berpikir, berkolaborasi, dan menyampaikan ide.\n\nPortofolio ini adalah dokumentasi proses tersebut: hal yang sudah saya bangun, hal yang masih saya pelajari, dan ide yang ingin saya wujudkan berikutnya.',
- currentFocus:['Web Development','UI/UX Design','Creative Coding'],contactEmail:'',whatsapp:'',github:'https://github.com/WickyZer',instagram:'',linkedin:'',location:'',cvUrl:'',heroImage:'',profileImage:'',journey,
+ currentFocus:['Web Development','UI/UX Design','Creative Coding'],contactEmail:'',whatsapp:'',github:'https://github.com/WickyZer',instagram:'',linkedin:'',location:'',cvUrl:'',heroImage:'',profileImage:'',journey,education:[],
  skills:[{name:'Next.js',sub:'Framework',symbol:'N',c:'white'},{name:'React',sub:'Interface',symbol:'⚛',c:'cyan'},{name:'TypeScript',sub:'Language',symbol:'TS',c:'blue'},{name:'Tailwind',sub:'Styling',symbol:'≈',c:'cyan'},{name:'Supabase',sub:'Database',symbol:'ϟ',c:'green'},{name:'Three.js',sub:'3D on the web',symbol:'△',c:'white'},{name:'Motion',sub:'Animation',symbol:'M',c:'yellow'},{name:'GitHub',sub:'Code & collaborate',symbol:'git',c:'pink'},{name:'Vercel',sub:'Deployment',symbol:'▲',c:'white'}]
 };

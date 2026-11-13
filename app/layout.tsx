@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import '@fontsource-variable/plus-jakarta-sans';
 import '@fontsource-variable/space-grotesk';
 import './globals.css';
+import './premium.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ahmadfadhilnaufal.my.id'),
