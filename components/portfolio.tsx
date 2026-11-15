@@ -77,7 +77,7 @@ export default function Portfolio() {
   const {scrollYProgress}=useScroll();
   const scaleX=useSpring(scrollYProgress,{stiffness:100,damping:30});
   const filtered=projects.filter(p=>filter==='Semua'||p.category===filter);
-  useEffect(()=>{try{const t=localStorage.getItem('af-theme')||'dark';setTheme(t);document.documentElement.dataset.theme=t;const saved=localStorage.getItem('af-motion-mode') as MotionMode|null;setMode(saved&&['full','subtle','off'].includes(saved)?saved:window.matchMedia('(max-width:760px)').matches?'subtle':'full');setPaused(localStorage.getItem('af-motion')==='paused');const l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('af-language');if(l==='en'){setLanguage('en');document.documentElement.lang='en';}}catch{}},[]);
+  useEffect(()=>{try{const t=localStorage.getItem('af-theme')||'dark';setTheme(t);document.documentElement.dataset.theme=t;const saved=localStorage.getItem('af-motion-mode') as MotionMode|null;setMode(saved&&['full','subtle','off'].includes(saved)?saved:window.matchMedia('(max-width:760px)').matches?'subtle':'full');setPaused(localStorage.getItem('af-motion')==='paused');const l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('af-language');if(l==='en'||l==='id'){setLanguage(l);document.documentElement.lang=l;}}catch{}},[]);
   useEffect(()=>{const ob=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)setActive(e.target.id);});},{rootMargin:'-20% 0px -55% 0px'});document.querySelectorAll('main section[id]').forEach(el=>ob.observe(el));return()=>ob.disconnect();},[]);
   useEffect(()=>{let alive=true;const db=getSupabase();if(!db){setCertState('error');return;}
     const timer=setTimeout(()=>{if(alive)setCertState('error');},12000);
