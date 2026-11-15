@@ -6,7 +6,7 @@ import './premium.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ahmadfadhilnaufal.my.id'),
-  title: { default: 'Ahmad Fadhil Naufal — Student. Developer. Creative.', template: '%s | Ahmad Fadhil Naufal' },
+  title: { default: 'Ahmad Fadhil Naufal — Teknik Mesin & Web Developer', template: '%s | Ahmad Fadhil Naufal' },
   description: 'Portofolio Ahmad Fadhil Naufal, mahasiswa Teknik Mesin, web developer, dan creative. Jelajahi proyek engineering, website, dan perjalanan belajar saya.',
   alternates: { canonical: '/' },
   twitter: { card: 'summary_large_image', title: 'Ahmad Fadhil Naufal', description: 'Teknik Mesin · Web Developer · Creative', images: ['/opengraph-image'] },
