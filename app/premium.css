@@ -188,3 +188,10 @@
 .experience-popover h3{font-size:13px;line-height:1.6;padding:4px 10px 9px;border-bottom:1px solid var(--border);margin-bottom:8px}
 [data-theme=light] .portfolio .experience-toggle{color:#7338a6;background:linear-gradient(140deg,#fff9,#e0c4f9aa,#b987e0aa);box-shadow:inset 0 1px 2px #fff,0 5px 0 #b18bcc55,0 10px 25px #50266b22}
 @media(max-width:760px){.portfolio .experience-controls{width:46px}.portfolio .experience-toggle{width:46px;height:46px;min-height:46px;border-radius:16px}.portfolio .experience-toggle svg{width:21px;height:21px}.experience-popover{bottom:60px;width:min(240px,calc(100vw - 32px));max-height:calc(100svh - 175px)}}
+
+/* Center the gear independently of the old text button's grid alignment. */
+.portfolio .experience-toggle{display:flex;align-items:center;justify-content:center;gap:0;line-height:1}
+.portfolio .experience-toggle svg{display:block;margin:0;flex-shrink:0;transform-origin:50% 50%}
+.portfolio .experience-toggle[aria-expanded=true] svg{animation:settings-gear-turn 4s linear infinite}
+@keyframes settings-gear-turn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.portfolio .experience-toggle[aria-expanded=true] svg{animation:none}}
