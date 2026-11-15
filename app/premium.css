@@ -195,3 +195,9 @@
 .portfolio .experience-toggle[aria-expanded=true] svg{animation:settings-gear-turn 4s linear infinite}
 @keyframes settings-gear-turn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @media(prefers-reduced-motion:reduce){.portfolio .experience-toggle[aria-expanded=true] svg{animation:none}}
+.portfolio .contact-brand-links{max-width:320px;flex-wrap:wrap;justify-content:flex-end;gap:10px}.portfolio .contact-brand-links:empty{display:none}
+.contact-quick-add{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.contact-quick-add .button{font-size:11px;min-height:42px;padding:9px 13px;gap:8px}.contact-quick-add img{width:20px;height:20px;object-fit:contain}
+.contact-edit-card{padding:22px;border:1px solid var(--border);border-radius:18px;margin-bottom:20px;background:#b080e706}.contact-edit-body{display:grid;grid-template-columns:160px minmax(0,1fr);gap:24px;margin-top:22px}.contact-edit-body .logo-uploader>img{background:transparent;padding:4px}.contact-edit-fields>label{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}.contact-editor-preview{border:1px solid var(--border);border-radius:16px;padding:18px;margin:18px 0 25px}.contact-editor-preview>span{font-size:11px;color:var(--muted)}.contact-editor-preview .portfolio{background:transparent;padding:12px 0 0}.contact-editor-preview .contact-brand-links,.studio-preview .contact-brand-links{justify-content:flex-start;max-width:100%}.contact-empty-editor{font-size:13px;margin:20px 0}
+@media(max-width:760px){.portfolio .contact-brand-links{max-width:100%;justify-content:flex-start}.contact-edit-body{grid-template-columns:1fr}.contact-edit-card{padding:18px 15px}.contact-edit-body .logo-uploader{width:100%}.contact-edit-fields .studio-fields.two{grid-template-columns:1fr}.contact-quick-add .button{font-size:10px}}
+.contact-quick-add img{background:#f2e9ff;border-radius:5px;padding:2px}
+[data-theme=light] .contact-brand-link img[src="/logos/tiktok.png"]{filter:brightness(0)}

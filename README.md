@@ -78,3 +78,9 @@ Studio additions:
 - Preview: inspect the current project/certificate form, or profile/education/tools, before saving. A dirty-state indicator and browser leave warning protect unsaved work.
 
 SEO includes canonical metadata, a generated 1200×630 social image, Twitter summary card, Person/CreativeWork structured data, robots.txt, and a sitemap containing published projects. Supabase category constraint update is recorded in `supabase/experience-upgrade.sql` and has already been applied. No credentials or personal image files are committed.
+
+## Custom contact apps
+
+Studio → **Aplikasi kontak** controls icons in the collaboration panel. Add LinkedIn, TikTok, Instagram, YouTube, GitHub, Gmail, or a custom app; choose/upload a transparent raster logo, enter its HTTPS profile URL (or an email), reorder, hide or remove, then save. The inline preview reflects pending changes. PNG/JPG/WebP uploads retain the existing 5 MB limit and admin-only Storage permissions.
+
+Settings without `contactApps` retain their existing profile contact links. Once the list is saved, it is authoritative; an empty array deliberately hides all app icons. Email text and other profile fields remain independently editable in Profil & kontak.

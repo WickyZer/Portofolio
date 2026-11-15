@@ -16,7 +16,7 @@ export type Skill = {name:string;sub:string;symbol:string;c:string;logo_url?:str
 export type Education = {id:string;level:string;school:string;startYear:string;endYear:string;major:string;description:string;logo_url:string;published?:boolean};
 export type Journey = {label:string;title:string;text:string;tags:string[]};
 export type ProjectStory={role?:string;outcome?:string;gallery?:string[]};
-export type Settings = {english?:Record<string,Record<string,string>>;projectStories?:Record<string,ProjectStory>;firstName:string;lastName:string;roles:string;heroDescription:string;about:string;aboutLong:string;currentFocus:string[];contactEmail:string;whatsapp:string;github:string;instagram:string;linkedin:string;location:string;cvUrl:string;heroImage:string;profileImage:string;journey:Journey[];skills:Skill[];education:Education[]};
+export type Settings = {contactApps?:import('./contact-apps').ContactApp[];english?:Record<string,Record<string,string>>;projectStories?:Record<string,ProjectStory>;firstName:string;lastName:string;roles:string;heroDescription:string;about:string;aboutLong:string;currentFocus:string[];contactEmail:string;whatsapp:string;github:string;instagram:string;linkedin:string;location:string;cvUrl:string;heroImage:string;profileImage:string;journey:Journey[];skills:Skill[];education:Education[]};
 export const defaultSettings:Settings = {
  firstName:'Ahmad Fadhil',lastName:'Naufal',roles:'Mahasiswa Teknik Mesin ✦ Web Developer ✦ Creative',
  heroDescription:'Mengubah rasa ingin tahu menjadi ide.\nMengubah ide menjadi pengalaman digital yang bermakna.',

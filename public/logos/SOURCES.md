@@ -19,3 +19,5 @@ are locally authored PNG assets and do not represent any institution or brand.
 Contact brands: LinkedIn uses Devicon linkedin/linkedin-original.svg.
 Gmail uses Google’s product image: https://www.gstatic.com/images/branding/product/2x/gmail_48dp.png
 Both are served as 128 px PNG.
+
+Contact presets TikTok, Instagram and YouTube use marks from https://github.com/simple-icons/simple-icons/tree/develop/icons (converted to PNG).
