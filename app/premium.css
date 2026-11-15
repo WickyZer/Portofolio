@@ -174,3 +174,17 @@
 
 .repeat-heading{flex-wrap:wrap;gap:12px}.repeat-heading>b{flex:1;min-width:120px}.studio-preview .preview-profile>section{margin-top:24px}.studio-preview .preview-profile h3{font-size:18px}.certificate-fan-detail>p{font-size:14px}
 .experience-controls label{flex-direction:row;justify-content:space-between}.experience-controls fieldset label{flex-direction:row;justify-content:flex-start;min-height:30px;gap:10px;margin:5px 10px}.experience-controls input[type=radio]{width:16px;height:16px;min-height:0;padding:0;margin:0;flex-shrink:0;accent-color:var(--accent)}.experience-controls fieldset{padding:4px 0}.experience-controls label select{font-size:12px;min-height:34px}
+
+/* Compact floating glass gear; options expand upward without changing its footprint. */
+.portfolio .experience-controls{width:52px;padding:0!important;background:transparent!important;border:0;box-shadow:none;backdrop-filter:none;border-radius:18px!important}
+.portfolio .experience-toggle{position:relative;display:grid;place-items:center;width:52px;height:52px;min-height:52px;padding:0;border:1px solid #e8c6ff66;border-radius:18px;color:#ead8ff;background:linear-gradient(140deg,#d4a1ff55,#7a3caf55 45%,#2b153de6);box-shadow:inset 0 1px 2px #fff7,inset 0 -3px 8px #12061f66,0 5px 0 #29123d99,0 10px 25px #06020d66;backdrop-filter:blur(18px);transition:transform .25s,box-shadow .25s;isolation:isolate}
+.portfolio .experience-toggle:before{content:'';position:absolute;inset:3px;border-radius:14px;background:linear-gradient(135deg,#ffffff20,transparent 55%);pointer-events:none;z-index:-1}
+.portfolio .experience-toggle svg{filter:drop-shadow(0 2px 2px #15032199);transition:transform .4s}
+.portfolio .experience-toggle:hover{transform:translateY(-2px);box-shadow:inset 0 1px 3px #fff8,inset 0 -3px 8px #12061f66,0 7px 0 #29123d99,0 14px 30px #06020d66}
+.portfolio .experience-toggle:hover svg{transform:rotate(25deg)}
+.portfolio .experience-toggle[aria-expanded=true]{border-color:#d6a4ffbb;color:#fff}
+.portfolio .experience-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.experience-popover{position:absolute;left:0;bottom:66px;width:240px;padding:13px 9px 8px;border:1px solid var(--border);border-radius:20px;background:var(--surface-solid);box-shadow:inset 0 1px 1px #fff2,0 15px 50px #08031166;backdrop-filter:blur(22px);max-height:calc(100svh - 125px);overflow-y:auto;overscroll-behavior:contain}
+.experience-popover h3{font-size:13px;line-height:1.6;padding:4px 10px 9px;border-bottom:1px solid var(--border);margin-bottom:8px}
+[data-theme=light] .portfolio .experience-toggle{color:#7338a6;background:linear-gradient(140deg,#fff9,#e0c4f9aa,#b987e0aa);box-shadow:inset 0 1px 2px #fff,0 5px 0 #b18bcc55,0 10px 25px #50266b22}
+@media(max-width:760px){.portfolio .experience-controls{width:46px}.portfolio .experience-toggle{width:46px;height:46px;min-height:46px;border-radius:16px}.portfolio .experience-toggle svg{width:21px;height:21px}.experience-popover{bottom:60px;width:min(240px,calc(100vw - 32px));max-height:calc(100svh - 175px)}}
