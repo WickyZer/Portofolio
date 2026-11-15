@@ -14,7 +14,7 @@ with check (exists (select 1 from public.portfolio_admins where email = lower((s
 create table public.portfolio_projects (
  id text primary key default gen_random_uuid()::text,
  title text not null check (char_length(title) between 2 and 180),
- category text not null check (category in ('Web','Creative','Akademik')),
+ category text not null check (category in ('Web','Creative','Akademik','Engineering')),
  subtitle text not null default '',
  description text not null default '',
  status text not null default 'Dalam pengembangan',

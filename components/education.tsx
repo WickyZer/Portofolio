@@ -1,4 +1,5 @@
 'use client';
+import {useLanguage} from './language-context';
 
 import { GraduationCap } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -7,10 +8,11 @@ import { safeExternalUrl } from '@/lib/supabase';
 import { RasterLogo } from './tool-logo';
 
 export default function EducationSection({items}:{items:Education[]}) {
-  const visible=items.filter(e=>e.school.trim()||safeExternalUrl(e.logo_url));
+  const {lang,t}=useLanguage();
+  const visible=items.filter(e=>e.published!==false&&(e.school.trim()||safeExternalUrl(e.logo_url)));
   return <section id="education" className="education-section shell section-space">
     <div className="section-kicker"><span className="section-dot"/> MY EDUCATION <span className="section-number">SD — SMK & BEYOND</span></div>
-    <div className="education-heading"><h2>Pendidikan<span className="accent">.</span></h2><p>Setiap langkah belajar membentuk perjalanan saya.</p></div>
+    <div className="education-heading"><h2>{t('Pendidikan')}<span className="accent">.</span></h2><p>{t('Setiap langkah belajar membentuk perjalanan saya.')}</p></div>
     {visible.length?<div className="education-list glass">{visible.map((e,i)=>{
       const years=[e.startYear,e.endYear].filter(Boolean).join(' – ');
       return <motion.article className="education-entry" key={e.id} initial={{y:12}} whileInView={{y:0}} viewport={{once:true}} transition={{duration:.5,delay:i*.05}}>

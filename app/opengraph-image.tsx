@@ -1,0 +1,5 @@
+import {ImageResponse} from 'next/og';
+export const alt='Ahmad Fadhil Naufal — Teknik Mesin, Web Development & Creative';
+export const size={width:1200,height:630};
+export const contentType='image/png';
+export default function Image(){return new ImageResponse(<div style={{width:'100%',height:'100%',display:'flex',flexDirection:'column',justifyContent:'center',padding:'80px',background:'linear-gradient(125deg,#10091e,#40205e)',color:'#f6edff',fontFamily:'sans-serif',position:'relative'}}><div style={{position:'absolute',right:70,top:60,width:300,height:300,border:'2px solid #b27cff',borderRadius:150,display:'flex',transform:'rotate(-25deg)',opacity:.4}}/><div style={{display:'flex',color:'#c08bff',fontSize:30,marginBottom:28}}>AF / PERSONAL PORTFOLIO</div><div style={{display:'flex',fontSize:76,fontWeight:700,maxWidth:900}}>Ahmad Fadhil Naufal</div><div style={{display:'flex',fontSize:29,marginTop:28,color:'#decaef'}}>Teknik Mesin · Web Developer · Creative</div><div style={{display:'flex',fontSize:23,marginTop:65,color:'#b790d3'}}>ahmadfadhilnaufal.my.id</div></div>,size);}

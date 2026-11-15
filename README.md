@@ -66,3 +66,15 @@ Vercel alias: https://portofolio-fadhil-livid.vercel.app
 Vercel uses Node.js 24, `npm ci`, and `npm run build`. Set the same two public Supabase variables for Production and Preview. The existing project protection settings are preserved.
 
 Education is displayed as a vertical list under Skills with a small uploaded logo beside each school. A saved logo also makes an entry visible before its school name is filled. LinkedIn, Gmail and GitHub icons in the collaboration panel use the profile/contact fields; empty values hide their icon.
+
+## Experience upgrade
+
+Visitors can choose Indonesian/English and Full/Subtle/Off motion from the Experience control. Preferences stay on their device; system reduced motion is always respected. Mobile defaults to Subtle and skips the Three.js canvas. The certificate viewer supports zoom (100–300%), reset, original image, and credential verification.
+
+Studio additions:
+- Bahasa / English: translations for profile, projects, certificates, education and journey. Empty fields retain original authored content.
+- Proyek: Engineering category, own role, verifiable outcome, multiple screenshot uploads/URLs, and existing problem/process/learning fields. Public projects have shareable `/projects/[id]` pages with metadata.
+- Pendidikan / Aplikasi & logo: per-entry public/draft switches. These are presentation controls inside public settings; do not store confidential draft content here. Project/certificate drafts continue to use database RLS.
+- Preview: inspect the current project/certificate form, or profile/education/tools, before saving. A dirty-state indicator and browser leave warning protect unsaved work.
+
+SEO includes canonical metadata, a generated 1200×630 social image, Twitter summary card, Person/CreativeWork structured data, robots.txt, and a sitemap containing published projects. Supabase category constraint update is recorded in `supabase/experience-upgrade.sql` and has already been applied. No credentials or personal image files are committed.
